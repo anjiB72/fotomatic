@@ -5,46 +5,22 @@ html {
   font-size: 16px;
 }
 
-.main-content {
-  position: relative;
-  top: 5.3125rem; /* To offset for fixed header. */
-}
 
-.center {
-  text-align: center;
-}
-
-.button {
-  border-radius: 4px;
-  background-color: #4a4a4a;
-  color: white;
-}
-
-.image-container {
-  overflow: hidden;
-}
-
-.image-container img {
-  display: block;
-}
-
-@media only screen and (max-width: 760px) {
-  .main-content {
-    top: 2.5625rem;
-  }
-}
 
 /* Header */
 
 header {
   position: fixed;
   width: 100%;
+  height: 5.3125rem;
+  z-index: 1;
   border-bottom: solid 1px #c6c1c1;
   background-color: white;
 }
 
 header .content {
   display: flex;
+  flex-direction: row;
   align-items: center;
   padding: 1.875rem;
 }
@@ -62,14 +38,15 @@ nav li {
 }
 
 nav a {
-  vertical-align: bottom;
+  vertical-align: middle;
   line-height: 1.6;
   font-size: 1rem;
   color: #4a4a4a;
 }
 
 header .icon {
-  width: 1rem;
+  vertical-align: middle;
+  width: 1.1rem;
   padding-left: .75rem;
 }
 
@@ -82,10 +59,15 @@ header .mobile {
     display: none;
   }
 
+  header {
+    width: 100%;
+    height: 3rem;
+  }
+
   header .mobile {
     display: block;
     width: 100%;
-  }
+    }
 
   header .content {
     padding: .5rem 0;
@@ -110,7 +92,47 @@ header .mobile {
   }
 }
 
+/*Main Content*/
+
+.main-content {
+  position: relative;
+  top: 5.3125rem; /* To offset for fixed header. */
+}
+
+.center {
+  border: 1px solid black;
+  text-align: center;
+}
+
+.button {
+  border-radius: 4px;
+  background-color: #4a4a4a;
+  color: white;
+}
+
+.image-container {
+  overflow: hidden;
+}
+
+.image-container img {
+  display: block;
+}
+
+@media only screen and (max-width: 760px) {
+  .main-content {
+    top: 3rem;
+  }
+}
+
 /* Sign Up Section */
+
+.banner {
+  border: 1px solid black;
+  background-image: url(../images/banner-landingpage.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 
 #sign-up-section {
   display: flex;
@@ -119,12 +141,13 @@ header .mobile {
   height: 43.5rem;
 }
 
-#sign-up-cta {
-  padding: 0 5rem 2.5rem 5rem;
-  border: solid 1px #979797;
-  border-radius: 4px;
-  background-color: #9dc20b;
-}
+  #sign-up-cta {
+    Margin: 10.62rem 0 10.62rem 6.25rem;
+    padding: 0 5rem 2.5rem 5rem;
+    border: solid 1px #979797;
+    border-radius: 4px;
+    background-color: #9dc20b;
+  }
 
 #sign-up-cta .content {
   width: 25.625rem;
